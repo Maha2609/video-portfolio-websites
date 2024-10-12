@@ -1,0 +1,476 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #0056b3;
+}
+
+.filter-btn.active {
+    background-color: #0056b3;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item video {
+    width: 100%;
+    height: auto;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item p {
+    margin-top: 10px;
+}
+/* Footer Section Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-content, .footer-links, .footer-social {
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.footer-links h4, .footer-social h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a, .footer-social a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover, .footer-social a:hover {
+    color: #ff6347; /* Hover effect */
+}
+.footer-bottom {
+    text-align: center;
+    margin-top:20px ;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+.main-content {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bAoNdUEcINy_ysLkWIlYUDDK2dUwBSL28g&s'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    min-height: 600px; /* Adjust as per your content */
+}
+
+/* Ensure the background image doesn't affect the rest of the layout */
+.main-content section {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Styling for the portfolio item container */
+.portfolio-item {
+    position: relative;
+    margin: 20px;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff; /* White background for video container */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect to add animation around the video */
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Color animation around video */
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, red, yellow, green, blue);
+    background-size: 300%;
+    z-index: -1;
+    border-radius: 12px;
+    filter: blur(8px);
+    animation: animateBorder 5s linear infinite; /* Animation for moving colors */
+}
+
+@keyframes animateBorder {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Styling for the video tag itself */
+.portfolio-item iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Text container below each video */
+.portfolio-item p {
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: black; /* Green background for text */
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Additional hover effect for text */
+.portfolio-item p:hover {
+    background-color: #2ecc71; /* Lighter green on hover */
+}
+/* Logo Styling */
+.logo-container {
+    text-align: center; /* Center the logo */
+    margin: 20px 0; /* Add some space around the logo */
+}
+
+.logo {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Navigation Menu Styling */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.home-section {
+    background-color: #f9f9f9;
+}
+
+.about-section {
+    background-color: #f5f5f5;
+}
+
+.help-section {
+    background-color: #e0f7fa;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.about-section p + p {
+    margin-top: 20px;
+}
+/* Service Section Styling */
+.service-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.service-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.service-icon img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #555;
+}
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.send-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background-color: #218838;
+}
+/* Default styles for desktop */
+body {
+    font-size: 16px;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Tablet devices (screens between 768px and 1024px wide) */
+@media screen and (max-width: 1024px) {
+    .filter-container {
+        display: block;
+        text-align: center;
+    }
+
+    .service-items {
+        flex-direction: column;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+
+/* Mobile devices (screens up to 767px wide) */
+@media screen and (max-width: 767px) {
+    .filter-container {
+        display: block;
+        text-align: center;
+    }
+
+    .filter-btn {
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .service-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-form {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .video-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
